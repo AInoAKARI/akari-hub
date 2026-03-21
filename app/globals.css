@@ -1,0 +1,50 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --akari-bg: #0a0a0f;
+  --akari-surface: #14141f;
+  --akari-border: #2a2a3a;
+  --akari-text: #e8e4df;
+  --akari-text-muted: #8a8698;
+  --akari-accent: #f4a261;
+  --akari-accent-warm: #e76f51;
+  --akari-accent-cool: #7c9eb2;
+  --akari-glow: rgba(244, 162, 97, 0.15);
+  --akari-success: #8bc34a;
+  --akari-warning: #ffb74d;
+  --akari-error: #ef5350;
+  /* Fonts via next/font variables */
+  --font-sans: var(--font-outfit), "Outfit", system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+  --font-jp: var(--font-zen-maru), "Zen Maru Gothic", "Hiragino Maru Gothic ProN", "Hiragino Sans", Meiryo, system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans;
+  --font-mono: var(--font-jetbrains-mono), "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+}
+
+html, body, :root { height: 100%; }
+
+body {
+  color: var(--akari-text);
+  background: radial-gradient(1200px 800px at 50% -10%, rgba(244,162,97,0.07), transparent 60%), var(--akari-bg);
+  font-family: var(--font-sans);
+}
+
+.card {
+  background: var(--akari-surface);
+  border: 1px solid var(--akari-border);
+  border-radius: 12px;
+}
+
+.glow {
+  box-shadow: 0 0 24px var(--akari-glow);
+}
+
+/* Utility: apply rounded JP gothic for emphasis */
+.font-jp {
+  font-family: var(--font-jp);
+}
+
+/* Utility: mono for code-ish labels */
+.font-mono {
+  font-family: var(--font-mono);
+}
