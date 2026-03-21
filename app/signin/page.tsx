@@ -27,7 +27,7 @@ export default function SignIn() {
   return (
     <div className="min-h-screen flex items-center justify-center p-6">
       <form onSubmit={onSubmit} className="card glow p-6 w-full max-w-sm space-y-4">
-        <h2 className="text-xl">やさしく灯りをともす</h2>
+        <h2 className="text-xl">やさしくあかりをともす</h2>
         <label className="block text-sm text-akari-muted">社員コード</label>
         <input className="w-full px-3 py-2 bg-transparent border border-[var(--akari-border)] rounded"
                value={employeeCode} onChange={e=>setCode(e.target.value)} placeholder="001 / 002" />

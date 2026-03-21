@@ -5,7 +5,7 @@ import CommandPalette from "@/components/command-palette"
 
 export const metadata = {
   title: "akari-hub",
-  description: "灯りOS Identity Hub"
+  description: "あかりOS Identity Hub"
 }
 
 const zenMaru = Zen_Maru_Gothic({

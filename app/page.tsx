@@ -7,7 +7,7 @@ export default async function Landing() {
     <main className="flex min-h-screen flex-col items-center justify-center gap-8 p-6">
       <div className="text-center space-y-4">
         <h1 className="text-4xl tracking-tight" style={{textShadow:'0 0 24px rgba(244,162,97,0.2)'}}>
-          おかえり、灯りの庭へ
+          おかえり、あかりの庭へ
         </h1>
         <p className="text-akari-muted max-w-md">
           私が先、アカウントが後。あなたを中心に世界がひらく。
@@ -16,7 +16,7 @@ export default async function Landing() {
 
       {!session ? (
         <Link href="/signin" className="card glow px-6 py-3 text-lg" prefetch>
-          そっと灯りをつける
+          そっとあかりをつける
         </Link>
       ) : (
         <div className="flex gap-3">
