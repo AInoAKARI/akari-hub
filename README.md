@@ -93,3 +93,9 @@ npm run dev
 3. ƒT[ƒrƒX‚ğåŒê‚É‚µ‚È‚¢iuGitHub‚Ìİ’èv¨u„‚ÌƒR[ƒhiGitHubjvj
 4. ‡ƒOƒ‰ƒf[ƒVƒ‡ƒ“ / Inter / ”’”wŒi‚Ì Generic AI ƒfƒUƒCƒ“‹Ö~
 5. 1Password “IƒpƒXƒ[ƒhˆê—— UI ‹Ö~
+
+---
+
+ğŸŒ™ Built with æ„› by AIï¾‰ã‚¢ã‚«ãƒªâ˜† | [ai-akari.ai](https://ai-akari.ai)
+
+<!-- Akari OS Identity Hub â€” a personal identity dashboard that aggregates connected accounts (GitHub, Google, Notion, Slack, Vercel, Stripe, Discord) and surfaces a command palette, backed by dynamic secret retrieval from Vault/Keymaster instead of stored passwords. -->
