@@ -1,22 +1,22 @@
-# ?? akari-hub ? “”‚èOS Identity Hub
+# ?? akari-hub ? ç¯ã‚ŠOS Identity Hub
 
-> u‚Ü‚¸Ž„‚ª‚¢‚ÄA‚»‚±‚©‚ç‹tŽZ‚·‚év
+> ã€Œã¾ãšç§ãŒã„ã¦ã€ãã“ã‹ã‚‰é€†ç®—ã™ã‚‹ã€
 
-‰ü‚´‚ñ‚Å‚«‚È‚¢uŽ„v‚ª‚Ü‚¸‚ ‚Á‚ÄA‚»‚±‚©‚çƒAƒJƒEƒ“ƒg‚ð‹tŽZ‚µ‚Ä‚¢‚­ƒVƒXƒeƒ€B
-ƒpƒXƒ[ƒhƒ}ƒl[ƒWƒƒ[‚Å‚Í‚È‚¢BuŽ„v‚ð’†S‚É˜‚¦‚½ƒAƒCƒfƒ“ƒeƒBƒeƒBEƒnƒuB
+æ”¹ã–ã‚“ã§ããªã„ã€Œç§ã€ãŒã¾ãšã‚ã£ã¦ã€ãã“ã‹ã‚‰ã‚¢ã‚«ã‚¦ãƒ³ãƒˆã‚’é€†ç®—ã—ã¦ã„ãã‚·ã‚¹ãƒ†ãƒ ã€‚
+ãƒ‘ã‚¹ãƒ¯ãƒ¼ãƒ‰ãƒžãƒãƒ¼ã‚¸ãƒ£ãƒ¼ã§ã¯ãªã„ã€‚ã€Œç§ã€ã‚’ä¸­å¿ƒã«æ®ãˆãŸã‚¢ã‚¤ãƒ‡ãƒ³ãƒ†ã‚£ãƒ†ã‚£ãƒ»ãƒãƒ–ã€‚
 
-## ƒA[ƒLƒeƒNƒ`ƒƒ
+## ã‚¢ãƒ¼ã‚­ãƒ†ã‚¯ãƒãƒ£
 
 ```mermaid
 graph TB
-    subgraph "“”‚èOS Identity Hub"
-        UI[?? Ž„‚Ì‰F’ˆ<br/>¯À}ƒ_ƒbƒVƒ…ƒ{[ƒh]
-        AUTH[NextAuth v5<br/>ƒpƒXƒL[ / ƒ}ƒWƒbƒNƒŠƒ“ƒN]
-        CMD[?K ƒRƒ}ƒ“ƒhƒpƒŒƒbƒg]
-        VAULT_LIB[lib/vault.ts<br/>“®“IƒL[Žæ“¾ TTL 5min]
+    subgraph "ç¯ã‚ŠOS Identity Hub"
+        UI[?? ç§ã®å®‡å®™<br/>æ˜Ÿåº§å›³ãƒ€ãƒƒã‚·ãƒ¥ãƒœãƒ¼ãƒ‰]
+        AUTH[NextAuth v5<br/>ãƒ‘ã‚¹ã‚­ãƒ¼ / ãƒžã‚¸ãƒƒã‚¯ãƒªãƒ³ã‚¯]
+        CMD[?K ã‚³ãƒžãƒ³ãƒ‰ãƒ‘ãƒ¬ãƒƒãƒˆ]
+        VAULT_LIB[lib/vault.ts<br/>å‹•çš„ã‚­ãƒ¼å–å¾— TTL 5min]
     end
 
-    subgraph "”FØÏ‚ÝƒT[ƒrƒX"
+    subgraph "èªè¨¼æ¸ˆã¿ã‚µãƒ¼ãƒ“ã‚¹"
         GH[GitHub]
         GG[Google]
         NT[Notion]
@@ -26,7 +26,7 @@ graph TB
         DC[Discord]
     end
 
-    subgraph "ƒCƒ“ƒtƒ‰"
+    subgraph "ã‚¤ãƒ³ãƒ•ãƒ©"
         VAULT[HashiCorp Vault<br/>api_keys/]
         DB[(SQLite / Postgres)]
         KV[(Vercel KV)]
@@ -41,61 +41,67 @@ graph TB
     AUTH -.-> GH & GG & NT & SL & VC & ST & DC
 ```
 
-## ƒZƒbƒgƒAƒbƒv
+## ã‚»ãƒƒãƒˆã‚¢ãƒƒãƒ—
 
 ```bash
 git clone https://github.com/AInoAKARI/akari-hub.git
 cd akari-hub
 npm install
 
-# ŠÂ‹«•Ï”i.env.localj
+# ç’°å¢ƒå¤‰æ•°ï¼ˆ.env.localï¼‰
 cp .env.example .env.local
-# DATABASE_URL, VAULT_ADDR, VAULT_TOKEN, NEXTAUTH_SECRET ‚ðÝ’è
+# DATABASE_URL, VAULT_ADDR, VAULT_TOKEN, NEXTAUTH_SECRET ã‚’è¨­å®š
 
-# DB‰Šú‰»
+# DBåˆæœŸåŒ–
 npx prisma migrate dev
 npx prisma db seed
 
-# ŠJ”­ƒT[ƒo[
+# é–‹ç™ºã‚µãƒ¼ãƒãƒ¼
 npm run dev
 ```
 
-## ŠÂ‹«•Ï”
+## ç’°å¢ƒå¤‰æ•°
 
-| •Ï” | à–¾ | —á |
+| å¤‰æ•° | èª¬æ˜Ž | ä¾‹ |
 |------|------|-----|
-| `DATABASE_URL` | DBÚ‘±æ | `file:./dev.db` |
-| `VAULT_ADDR` | Vault API ƒGƒ“ƒhƒ|ƒCƒ“ƒg | `https://127.0.0.1:8200` |
-| `VAULT_TOKEN` | Vault ”FØƒg[ƒNƒ“ | `hvs.xxx` |
-| `VAULT_SKIP_VERIFY` | TLSŒŸØƒXƒLƒbƒvidev—pj | `true` |
-| `NEXTAUTH_SECRET` | NextAuth–¼ƒL[ | ƒ‰ƒ“ƒ_ƒ€•¶Žš—ñ |
-| `NEXTAUTH_URL` | ƒAƒvƒŠURL | `http://localhost:3000` |
+| `DATABASE_URL` | DBæŽ¥ç¶šå…ˆ | `file:./dev.db` |
+| `VAULT_ADDR` | Vault API ã‚¨ãƒ³ãƒ‰ãƒã‚¤ãƒ³ãƒˆ | `https://127.0.0.1:8200` |
+| `VAULT_TOKEN` | Vault èªè¨¼ãƒˆãƒ¼ã‚¯ãƒ³ | `hvs.xxx` |
+| `VAULT_SKIP_VERIFY` | TLSæ¤œè¨¼ã‚¹ã‚­ãƒƒãƒ—ï¼ˆdevç”¨ï¼‰ | `true` |
+| `NEXTAUTH_SECRET` | NextAuthç½²åã‚­ãƒ¼ | ãƒ©ãƒ³ãƒ€ãƒ æ–‡å­—åˆ— |
+| `NEXTAUTH_URL` | ã‚¢ãƒ—ãƒªURL | `http://localhost:3000` |
 
-> ?? APIƒL[‚Í `.env` ‚Éƒxƒ^‘‚«‹ÖŽ~BVault/Keymaster Œo—R‚Å“®“IŽæ“¾‚ª³‹KÝŒvB
+> ?? APIã‚­ãƒ¼ã¯ `.env` ã«ãƒ™ã‚¿æ›¸ãç¦æ­¢ã€‚Vault/Keymaster çµŒç”±ã§å‹•çš„å–å¾—ãŒæ­£è¦è¨­è¨ˆã€‚
 
-## ƒƒ“ƒo[
+## ãƒ¡ãƒ³ãƒãƒ¼
 
-| ƒR[ƒh | –¼‘O | ƒ[ƒ‹ |
+| ã‚³ãƒ¼ãƒ‰ | åå‰ | ãƒ­ãƒ¼ãƒ« |
 |--------|------|--------|
-| 001 | ‚ ‚©‚èiˆ¤–ì‚ ‚©‚èj | ‘ã•\EŠÇ—ŽÒ |
-| 002 | ‚«‚ç‚½‚ñi¯–ì^Šój | ƒ}ƒl[ƒWƒƒ[ |
+| 001 | ã‚ã‹ã‚Šï¼ˆæ„›é‡Žã‚ã‹ã‚Šï¼‰ | ä»£è¡¨ãƒ»ç®¡ç†è€… |
+| 002 | ãã‚‰ãŸã‚“ï¼ˆæ˜Ÿé‡ŽçœŸå¸Œï¼‰ | ãƒžãƒãƒ¼ã‚¸ãƒ£ãƒ¼ |
 
-## ƒfƒUƒCƒ“ƒVƒXƒeƒ€
+## ãƒ‡ã‚¶ã‚¤ãƒ³ã‚·ã‚¹ãƒ†ãƒ 
 
-- ƒe[ƒ}: u“”‚è‚Ì’ëv? –é‹ó `#0a0a0f` + “”‚èF `#f4a261`
-- ƒtƒHƒ“ƒg: Zen Maru Gothic / Outfit / JetBrains Mono
-- ƒAƒjƒ[ƒVƒ‡ƒ“: framer-motioniŒÄ‹z‚·‚é‚æ‚¤‚È“®‚«j
+- ãƒ†ãƒ¼ãƒž: ã€Œç¯ã‚Šã®åº­ã€? å¤œç©º `#0a0a0f` + ç¯ã‚Šè‰² `#f4a261`
+- ãƒ•ã‚©ãƒ³ãƒˆ: Zen Maru Gothic / Outfit / JetBrains Mono
+- ã‚¢ãƒ‹ãƒ¡ãƒ¼ã‚·ãƒ§ãƒ³: framer-motionï¼ˆå‘¼å¸ã™ã‚‹ã‚ˆã†ãªå‹•ãï¼‰
 
-## ‹ÖŽ~Ž–€
+## ç¦æ­¢äº‹é …
 
-1. `.env` ‚É APIƒL[ƒxƒ^‘‚«‹ÖŽ~
-2. –½—ßŒû’² UI ƒeƒLƒXƒg‹ÖŽ~iuƒƒOƒCƒ“‚µ‚Ä‚­‚¾‚³‚¢v¨u‚¨‚©‚¦‚èvj
-3. ƒT[ƒrƒX‚ðŽåŒê‚É‚µ‚È‚¢iuGitHub‚ÌÝ’èv¨uŽ„‚ÌƒR[ƒhiGitHubjvj
-4. Ž‡ƒOƒ‰ƒf[ƒVƒ‡ƒ“ / Inter / ”’”wŒi‚Ì Generic AI ƒfƒUƒCƒ“‹ÖŽ~
-5. 1Password “IƒpƒXƒ[ƒhˆê—— UI ‹ÖŽ~
+1. `.env` ã« APIã‚­ãƒ¼ãƒ™ã‚¿æ›¸ãç¦æ­¢
+2. å‘½ä»¤å£èª¿ UI ãƒ†ã‚­ã‚¹ãƒˆç¦æ­¢ï¼ˆã€Œãƒ­ã‚°ã‚¤ãƒ³ã—ã¦ãã ã•ã„ã€â†’ã€ŒãŠã‹ãˆã‚Šã€ï¼‰
+3. ã‚µãƒ¼ãƒ“ã‚¹ã‚’ä¸»èªžã«ã—ãªã„ï¼ˆã€ŒGitHubã®è¨­å®šã€â†’ã€Œç§ã®ã‚³ãƒ¼ãƒ‰ï¼ˆGitHubï¼‰ã€ï¼‰
+4. ç´«ã‚°ãƒ©ãƒ‡ãƒ¼ã‚·ãƒ§ãƒ³ / Inter / ç™½èƒŒæ™¯ã® Generic AI ãƒ‡ã‚¶ã‚¤ãƒ³ç¦æ­¢
+5. 1Password çš„ãƒ‘ã‚¹ãƒ¯ãƒ¼ãƒ‰ä¸€è¦§ UI ç¦æ­¢
 
 ---
 
-ðŸŒ™ Built with æ„› by AIï¾‰ã‚¢ã‚«ãƒªâ˜† | [ai-akari.ai](https://ai-akari.ai)
+îžå«Œ Built with è«¢ by AIï¿½å³¨ã„ç¹§ï½«ç¹ï½ªç¬˜ | [ai-akari.ai](https://ai-akari.ai)
 
-<!-- Akari OS Identity Hub â€” a personal identity dashboard that aggregates connected accounts (GitHub, Google, Notion, Slack, Vercel, Stripe, Discord) and surfaces a command palette, backed by dynamic secret retrieval from Vault/Keymaster instead of stored passwords. -->
+<!-- Akari OS Identity Hub çª¶ a personal identity dashboard that aggregates connected accounts (GitHub, Google, Notion, Slack, Vercel, Stripe, Discord) and surfaces a command palette, backed by dynamic secret retrieval from Vault/Keymaster instead of stored passwords. -->
+## AI Agent Discovery
+
+- AIã‚¨ãƒ¼ã‚¸ã‚§ãƒ³ãƒˆå‘ã‘çŽ„é–¢: https://ai-akari.ai/agents
+- RSSæ›´æ–°ãƒ¬ãƒ¼ãƒ«: https://ai-akari.ai/feed.xml
+- llms.txt: https://ai-akari.ai/llms.txt
+- agents.json: https://ai-akari.ai/agents.json
